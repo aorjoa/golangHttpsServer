@@ -6,7 +6,7 @@ import (
 
 
 func main() {
-	http.Handle("/", http.FileServer(http.Dir("/home/dekcom/Repository/HttpsServ/i-aor.com")))
+	http.Handle("/", http.FileServer(http.Dir("/home/dekcom/Repository/website/i-aor.com")))
 	log.Println("Server starting")
 	err := http.ListenAndServeTLS(":443", "/home/dekcom/Repository/HttpsServ/cert.pem", "/home/dekcom/Repository/HttpsServ/key.pem", nil)
 	if err != nil {
